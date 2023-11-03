@@ -1,5 +1,5 @@
 import Flutter
-import HealthKit
+//import HealthKit
 import UIKit
 import WatchConnectivity
 
@@ -53,8 +53,8 @@ public class SwiftWatchConnectivityPlugin: NSObject, FlutterPlugin, WCSessionDel
             } catch {
                 result(FlutterError(code: "Error updating application context", message: error.localizedDescription, details: nil))
             }
-        case "startWatchApp":
-            HKHealthStore().startWatchApp(with: HKWorkoutConfiguration()) { success, error in
+        case "startWatchApp": break;
+            /*HKHealthStore().startWatchApp(with: HKWorkoutConfiguration()) { success, error in
                 if success {
                     result(nil)
                 } else if let error = error {
@@ -62,7 +62,7 @@ public class SwiftWatchConnectivityPlugin: NSObject, FlutterPlugin, WCSessionDel
                 } else {
                     result(FlutterError(code: "Unable to start watch app", message: nil, details: nil))
                 }
-            }
+            }*/
         
         // Not implemented
         default:
